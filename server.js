@@ -3,6 +3,7 @@ const cors = require('cors');
 const express = require('express');
 const issuesRouter = require('./routes/issues');
 const helmet = require('helmet');
+const path = require('path');
 
 require('dotenv').config();
 
