@@ -68,7 +68,7 @@ export default class CreateIssue extends Component {
 
         console.log(issue);
 
-        axios.post('http://localhost:3001/issues/add', issue)
+        axios.post('/issues/add', issue)
             .then(res => console.log(res.data));
         
         alert("Issue created succesfully!  " + this.state.title)

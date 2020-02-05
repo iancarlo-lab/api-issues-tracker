@@ -27,7 +27,7 @@ export default class IssuesList extends Component {
     }
 
     componentDidMount(){
-        axios.get('http://localhost:3001/issues/')
+        axios.get('/issues')
          .then(response => {
              this.setState({
                  issues: response.data
@@ -37,7 +37,7 @@ export default class IssuesList extends Component {
     }
 
     deleteIssue(id){
-        axios.delete('http://localhost:3001/issues/'+id)
+        axios.delete('/issues/'+id)
             .then(res => console.log(res.data));
             
             this.setState({

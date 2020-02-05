@@ -23,7 +23,7 @@ export default class EditIssue extends Component {
     }
 
     componentDidMount(){
-        axios.get('http://localhost:3001/issues/'+this.props.match.params.id)
+        axios.get('/issues/'+this.props.match.params.id)
             .then(response => {
                 this.setState({
                     title: response.data.title,
@@ -83,7 +83,7 @@ export default class EditIssue extends Component {
 
         console.log(issue);
 
-        axios.put('http://localhost:3001/issues/update/'+this.props.match.params.id, issue)
+        axios.put('/issues/update/'+this.props.match.params.id, issue)
             .then(res => console.log(res.data));
         
         alert("Issue edited succesfully!  " + this.state.title)
